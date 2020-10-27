@@ -15,7 +15,7 @@ const parse = async () => {
   ];
 
   const data = {}
-
+  const address = 'https://vashidveri72.ru'
   for (let i of links) {
     const selector = await getHTML(
      `https://vashidveri72.ru/catalog/dveri_vkhodnye/${i}`
@@ -23,9 +23,9 @@ const parse = async () => {
     selector('.one_section_product_cells').each((i, element) => {
       const title = selector(element).find('div.name_product>a').text();
       const price = selector(element).find('div.new_price').text();
-      const linkItem = selector(element).find('div.name_product>a').attr('href')
-      const linkImg =  selector(element).find('a.image_product').attr('style').replace(/background-image:/gi, '')
-      data[`${title}`] = {price, linkItem, linkImg}
+      const linkItem = `${address}${selector(element).find('div.name_product>a').attr('href')}`
+      const url =  `${address}${selector(element).find('a.image_product').attr('style').replace(/background-image:url\('/gi, '').replace(/'/g, '')}`
+      data[`${title}`] = {price, linkItem, url}
       
     })
   }
