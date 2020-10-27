@@ -1,0 +1,25 @@
+{
+  "name": "parservv",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giridhar108/parserVV.git"
+  },
+  "author": "german fomenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Giridhar108/parserVV/issues"
+  },
+  "homepage": "https://github.com/Giridhar108/parserVV#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cheerio": "^1.0.0-rc.3",
+    "fs": "0.0.1-security",
+    "puppeteer": "^5.4.0"
+  }
+}
